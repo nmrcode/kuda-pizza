@@ -1,0 +1,206 @@
+//////////////////////////////////
+
+.cart-sidebar {
+   font-family: Inter;
+   display: flex;
+   justify-content: flex-end;
+   position: fixed;
+   z-index: 1000;
+   height: 100%;
+   width: 100%;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+
+
+   &._open {
+      opacity: 1;
+      visibility: visible;
+   }
+
+   // .cart-sidebar__overlay
+   &__overlay {
+      position: fixed;
+      cursor: pointer;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, .5);
+   }
+
+   // .cart-sidebar__wrapper
+   &__wrapper {
+      position: relative;
+      z-index: 1000;
+      min-height: 100%;
+      width: rem(420);
+      background-color: var(--color-white);
+      display: flex;
+      flex-direction: column;
+      @include pc_576 {
+         width: 100%;
+      }
+   }
+
+   // .cart-sidebar__header
+   &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: rem(32) rem(20);
+   }
+
+   // .cart-sidebar__title
+   &__title {
+      font-weight: 600;
+      font-size: rem(32);
+      line-height: calc((40 / 32) * 100%);
+   }
+
+   // .cart-sidebar__close
+   &__close {
+      cursor: pointer;
+      width: rem(24);
+      height: rem(24);
+
+      svg {
+         width: 100%;
+         height: 100%;
+         fill: var(--color-gray)
+      }
+   }
+
+   // .cart-sidebar__body
+   &__body {
+      overflow-y: auto;
+      flex: 1 1 auto;
+   }
+
+   // .cart-sidebar__footer
+   &__footer {
+   }
+}
+
+.product-sidebar-body {
+   padding: rem(12);
+   //.product-sidebar-body--products
+   &__products {
+
+   }
+
+   //.product-sidebar-body--product
+   &__product {
+      display: flex;
+      align-items: center;
+      padding: rem(16);
+      border: 1px solid var(--color-line-gray);
+      border-radius: rem(12);
+
+      &:not(:last-child) {
+         margin-bottom: rem(20);
+      }
+   }
+
+   // .product-sidebar-body__img
+   &__img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: rem(16);
+   }
+
+   // .product-sidebar-body__content
+   &__content {
+      flex: 0 0 rem(238);
+      @include pc_576 {
+         flex: 0 0 rem(160);
+      }
+   }
+
+   // .product-sidebar-body__name
+   &__name {
+      font-weight: 600;
+      font-size: rem(16);
+      line-height: calc((20 / 16) * 100%);
+      margin-bottom: rem(8);
+      @include pc_576 {
+         font-size: rem(14);
+      }
+   }
+
+   // .product-sidebar-body__attr
+   &__attr {
+      font-size: rem(14);
+      line-height: calc((18 / 14) * 100%);
+      margin-bottom: rem(12);
+      @include pc_576 {
+         font-size: rem(12);
+      }
+   }
+
+   // .product-sidebar-body__bottom
+   &__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   // .product-sidebar-body__counter
+   &__counter {
+   }
+
+   // .product-sidebar-body__price
+   &__price {
+      font-weight: 600;
+      font-size: rem(16);
+      line-height: calc((20 / 16) * 100%);
+      color: var(--color-accent);
+
+      &::after {
+         content: "₽";
+         margin-left: rem(5);
+      }
+
+      @include pc_576 {
+         font-size: rem(14);
+      }
+   }
+}
+
+.product-sidebar-footer {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: rem(12) rem(20);
+   border-top: 1px solid var(--color-line-gray);
+   @include pc_576 {
+      flex-direction: column;
+   }
+   // .product-sidebar-footer__price
+   &__price {
+      font-weight: 600;
+      font-size: rem(20);
+      line-height: calc((28 / 20) * 100%);
+      color: var(--color-accent);
+
+      &::after {
+         content: "₽";
+         margin-left: rem(5);
+      }
+
+      @include pc_576 {
+         margin-bottom: rem(12);
+      }
+   }
+
+   // .product-sidebar-footer__btn
+   &__btn {
+   }
+}

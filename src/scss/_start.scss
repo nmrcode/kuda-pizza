@@ -1,0 +1,31 @@
+//Контейнер
+$content-width-figma: 1290; //Ширина контейнера в фигме
+$container-offset: 20; //Отступы безопасности
+$container-width: calc($content-width-figma + $container-offset * 2);
+
+//Цвета (color-название цвета)
+:root {
+   --color-primary: #191919;
+
+   --color-gray: #A5A5A5;
+   --color-line-gray: #F0F0F0;
+   --color-background-gray: #F9F9F9;
+
+   --color-accent: #FF7010;
+   --color-light-accent: #FFEEE2;
+   --color-accent-hover: #d56223;
+   --color-red: #E23535;
+   --color-green: #24D17E;
+
+   --color-white: #fff;
+   --color-black: #000;
+}
+
+$font-family: "SFPro", sans-serif;
+$font-size: rem(16);
+$font-weight: 400;
+$font-color: var(--color-primary);
+
+//Размеры
+$site-min-width: 320px;
+$site-max-width: 1920; // Нужен для работы адаптивного свойства

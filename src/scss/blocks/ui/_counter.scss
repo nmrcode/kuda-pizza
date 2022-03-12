@@ -1,0 +1,49 @@
+.counter {
+   // .counter__wrapper
+   &__wrapper {
+      display: flex;
+      align-items: center;
+      flex: 0 0 rem(92);
+      width: rem(92);
+      background-color: #ffeee2;
+      border-radius: rem(8);
+      overflow: hidden;
+   }
+
+   // .counter__decr
+   &__decr {
+      color: var(--color-accent);
+      padding: rem(8);
+      transition: background-color .2s ease-in-out, color .2s ease-in-out;
+      @include pc_hover {
+         color: #ffeee2;
+         background-color: var(--color-accent);
+      }
+   }
+
+   // .counter__value
+   &__value {
+      padding: 0 rem(5);
+      color: var(--color-accent);
+      text-align: center;
+      background-color: transparent;
+      width: 100%;
+      outline: none;
+      /* Chrome, Safari, Edge, Opera */
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+      }
+
+      /* Firefox */
+      &[type=number] {
+         -moz-appearance: textfield;
+      }
+   }
+
+   // .counter__incr
+   &__incr {
+      @extend .counter__decr;
+   }
+}

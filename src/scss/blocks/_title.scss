@@ -1,0 +1,32 @@
+.title {
+   font-family: Inter;
+   font-weight: 600;
+   color: var(--color-primary);
+   // .title--h2
+   &--h2 {
+      font-size: rem(40);
+      line-height: calc((48 / 40) * 100%);
+      @include pc_576 {
+         font-size: rem(28);
+      }
+   }
+
+   // .title--h3
+   &--h3 {
+      font-size: rem(18);
+      line-height: calc((24 / 18) * 100%);
+      transition: color .2s ease-in-out;
+      @include pc_hover {
+         color: var(--color-accent);
+      }
+   }
+
+   // .title--h4
+   &--h4 {
+      font-size: rem(32);
+      line-height: calc((32 / 32) * 100%);
+      @include pc_576 {
+         font-size: rem(20);
+      }
+   }
+}

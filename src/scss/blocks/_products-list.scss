@@ -1,0 +1,81 @@
+.products-list {
+   // .products-list__header
+   &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include ad-value(margin-bottom, 36, 20, 1);
+   }
+
+   // .products-list__title
+   &__title {
+      margin-right: rem(10);
+   }
+
+   // .products-list__show-all
+   &__show-all {
+      font-size: rem(16);
+      background: var(--color-white);
+      padding: em(5, 16) em(10, 16);
+      border-radius: em(5, 16);
+      transition: background-color .2s ease-in-out, color .2s ease-in-out;
+      @include pc_hover {
+         color: var(--color-white);
+         background-color: var(--color-accent);
+      }
+   }
+
+   // .products-list__catalog
+   &__catalog {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: rem(30);
+      @include pc_1200 {
+         grid-template-columns: repeat(3, 1fr);
+      }
+      @include pc_992 {
+         grid-template-columns: repeat(2, 1fr);
+         gap: rem(20);
+
+      }
+      @include pc_576 {
+         grid-template-columns: repeat(1, 1fr);
+      }
+   }
+
+   // .products-list__item
+   &__item {
+   }
+
+   //.products-list__filter--filter
+   &__filter {
+      display: flex;
+      align-items: center;
+      color: var(--color-primary);
+      justify-content: center;
+      background-color: var(--color-white);
+      padding: rem(7) rem(16);
+      border: 1px solid var(--color-line-gray);
+      border-radius: rem(6);
+      transition: color .2s ease-in-out, background-color .2s ease-in-out;
+
+      span {
+         margin-left: rem(8);
+      }
+
+      svg {
+         width: rem(16);
+         height: rem(16);
+         fill: var(--color-accent);
+         transition: fill .2s ease-in-out;
+      }
+
+      @include pc_hover {
+         color: var(--color-white);
+         background-color: var(--color-accent);
+         svg {
+            fill: var(--color-white);
+         }
+      }
+   }
+}

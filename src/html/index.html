@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('includes/layout/head.html', {"title": 'Главная'})
+
+<body>
+<div class="wrapper">
+   @@include('includes/layout/header.html')
+   <main class="page">
+      @@include('includes/layout/cart-sidebar.html')
+      @@include('includes/hero.html')
+      @@include('includes/pizza-section.html')
+      @@include('includes/sushi-section.html')
+      @@include('includes/snacks-section.html')
+      @@include('includes/dessert-section.html')
+      @@include('includes/combo-section.html')
+      @@include('includes/delivery-info-section.html')
+   </main>
+   @@include('includes/layout/footer.html')
+</div>
+@@include('includes/layout/modals.html')
+</body>
+</html>

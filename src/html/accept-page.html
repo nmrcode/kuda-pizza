@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('includes/layout/head.html', {"title": 'Ваш заказ принят'})
+
+<body>
+<div class="wrapper">
+   @@include('includes/layout/header.html')
+   <main class="page">
+      @@include('includes/layout/cart-sidebar.html')
+      <section class="page__order-accept order-accept">
+         <div class="container">
+            <div class="order-accept__wrapper">
+               <img src="img/bg_order-accept.png" class="order-accept__img" alt="" loading="lazy">
+               <div class="order-accept__label">Заказ №310202 принят</div>
+               <div class="order-accept__text">Спасибо за заказ!
+                  Примерное время доставки 45 минут. Статус отследить можно нажав на кнопку ниже
+               </div>
+               <div class="order-accept__btn btn btn-reset">Отследить заказ</div>
+            </div>
+         </div>
+      </section>
+   </main>
+   @@include('includes/layout/footer.html')
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+@use "sass:math";
+@import "vendors/reset";
+
+//Миксины
+@import "mixins/font-face";
+//Подключение шрифтов
+@import "mixins/burger";
+// Тройной бургер
+@import "mixins/ad-value";
+// Адаптивное свойство
+@import "mixins/breakpoints";
+// Брейкпоинты и hover только для пк
+@import "mixins/rem-em-prc";
+// Брейкпоинты и hover только для пк
+
+//Настройки проекта
+@import "./fonts";
+@import "./start";
+@import "./settings";
+@import "./blocks/common/common";
+
+//Стили для плагинов
+@import "./vendors";
+
+//Подключение UI компонентов (кнопки, инпуты, формы и тд)
+@import "blocks/ui/buttons";
+@import "blocks/ui/forms";
+@import "blocks/ui/counter";
+
+// Подключение блоков
+@import "blocks/title";
+@import "blocks/cart-sidebar";
+@import "blocks/header";
+@import "blocks/header-catalog";
+@import "blocks/hero";
+@import "blocks/products-list";
+@import "blocks/product-article";
+@import "blocks/delivery-info-section";
+@import "blocks/product-modal";
+@import "blocks/your-order";
+@import "blocks/order-accept";
+@import "blocks/footer";

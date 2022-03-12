@@ -1,0 +1,36 @@
+.btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: rem(16);
+   line-height: calc((22 / 16) * 100%);
+   color: var(--color-white);
+   background-color: var(--color-accent);
+   border-radius: em(6, 16);
+   padding: em(13, 16) em(32, 16);
+   transition: background-color .2s ease-in-out, transform .1s ease-in-out;
+
+   span {
+      @include pc_768 {
+         display: none;
+      }
+   }
+
+   svg {
+      @include mb_768 {
+         display: none;
+      }
+      width: rem(20);
+      height: rem(17);
+      fill: currentColor;
+   }
+
+   @include pc_hover {
+      background-color: var(--color-accent-hover);
+      transform: scale(1.05);
+   }
+
+   &:active {
+      transform: scale(1);
+   }
+}
