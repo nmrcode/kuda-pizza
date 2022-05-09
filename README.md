@@ -33,4 +33,4 @@
 ![App Screenshot](https://github.com/nmrcode/ImagesForGH/blob/main/pizza_2.png)
 
 Модальное окно
-![App Screenshot](![App Screenshot](https://github.com/nmrcode/ImagesForGH/blob/main/pizza_3.png)
+![App Screenshot](https://github.com/nmrcode/ImagesForGH/blob/main/pizza_3.png)
